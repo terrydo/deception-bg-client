@@ -1,0 +1,18 @@
+.room-list {
+    background-image: url(~assets/images/buttons/frame-bg.jpg);
+    background-size: 100% 100%;
+    padding: 50px;
+    border: 1px solid #111;
+    border-radius: 5px;
+    height: 400px;
+    overflow-y: auto;
+
+    .title {
+        font-size: 40px;
+        color: #fff;
+    }
+
+    .room {
+        padding: 10px 15px;
+    }
+}

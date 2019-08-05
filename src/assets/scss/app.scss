@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Modern+Antiqua&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import "reboot";
+@import "variables";
+
+@import "Logo/index";
+@import "RoomList/index";
+
+:root {
+  font-size: 16px;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  font-family: $default-font-family;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url("~assets/images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.frame {
+  background-image: url("~assets/images/buttons/frame-bg.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.form {
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("~assets/images/buttons/frame-bg.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  border: 3px solid #111;
+
+  &.frame {
+    padding: 15px;
+  }
+  &__group {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+    color: $text-color;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.btn {
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: transparent;
+  display: inline-block;
+
+  &--type-1 {
+    background-image: url("~assets/images/buttons/type1.png");
+    background-size: 100% 100%;
+    min-width: 170px;
+    min-height: 50px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 21px;
+  }
+}
