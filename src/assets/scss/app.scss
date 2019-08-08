@@ -3,9 +3,6 @@
 @import "reboot";
 @import "variables";
 
-@import "Logo/index";
-@import "RoomList/index";
-
 :root {
   font-size: 16px;
 }
@@ -101,8 +98,12 @@ body {
     background-image: url("~assets/images/buttons/type1.png");
     background-size: 100% 100%;
     min-width: 170px;
+    padding: 0 25px;
     min-height: 50px;
     color: rgba(255, 255, 255, 0.9);
     font-size: 21px;
   }
 }
+
+@import "Logo/index";
+@import "RoomList/index";

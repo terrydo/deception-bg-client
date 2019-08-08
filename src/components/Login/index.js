@@ -20,6 +20,7 @@ class LoginForm extends React.Component {
     });
 
     this.props.socket.on('sv_loginCb', data => {
+      console.log(data);
       if (data && data.success) {
         this.props.doSetToken(data.token);
       }
