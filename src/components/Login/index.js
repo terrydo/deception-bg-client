@@ -20,8 +20,15 @@ class LoginForm extends React.Component {
     });
 
     this.props.socket.on('sv_loginCb', data => {
-      console.log(data);
-      if (data && data.success) {
+      if (!data) {
+        alert('An error occurred. Please try again later.');
+      }
+
+      if (data.error) {
+        alert(data.error);
+      }
+
+      if (data.success) {
         this.props.doSetToken(data.token);
       }
     });
@@ -81,7 +88,7 @@ class LoginForm extends React.Component {
 };
 
 const mapStateToProps = state => ({
-  socket: state.socket
+  socket: state.global.socket
 });
 
 const mapDispatchToProps = dispatch => {

@@ -1,7 +1,9 @@
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import { SET_SOCKET, SET_TOKEN } from './constants';
 import { produce } from 'immer';
 import socket from './socket';
+
+import RoomListReducer from './components/RoomList/reducer';
 
 const initialState = {
   socket,
@@ -23,6 +25,11 @@ function rootReducer(state = initialState, action) {
   })
 }
 
-const store = createStore(rootReducer, initialState);
+const store = createStore(combineReducers(
+  {
+    global: rootReducer,
+    roomList: RoomListReducer,
+  }
+));
 
 export default store;

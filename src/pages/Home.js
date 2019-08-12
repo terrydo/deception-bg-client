@@ -15,7 +15,7 @@ class HomePage extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  token: state.token,
+  token: state.global.token,
 });
 
 export function mapDispatchToProps() {

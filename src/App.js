@@ -26,7 +26,7 @@ class App extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  socket: state.socket,
+  socket: state.global.socket,  
 });
 
 export function mapDispatchToProps() {
