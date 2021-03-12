@@ -1,0 +1,9 @@
+version: "3.3"
+services:
+  deception-client:
+    restart: always
+    build:
+      context: .
+      target: dev
+    ports:
+      - "3000:3000"
